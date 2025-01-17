@@ -5,6 +5,7 @@ export const AVAILABLE_OPTIONS = ['No Image', 'WithImage'] as const;
 export const AVAILABLE_SORT = ['Latest', 'Oldest'] as const;
 
 export const TweetFilterValidator = z.object({
+  name: z.string(),
   options: z.array(z.enum(AVAILABLE_OPTIONS)),
   sort: z.enum(AVAILABLE_SORT),
   BangerLevel: z.tuple([z.number(), z.number()]),
